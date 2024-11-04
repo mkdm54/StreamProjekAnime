@@ -3,3 +3,6 @@ asset/image/
 
 # Mengabaikan folder video dan semua isinya
 asset/video/
+
+# Mengabaikan file README.md
+README.md
