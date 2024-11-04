@@ -1,2 +1,5 @@
-# Mengabaikan folder video dan semua isinya
-video/
+# Mengabaikan folder imgae dan semua isinya
+asset/image/
+
+# Mengabaikan folder imgae dan semua isinya
+asset/video/
