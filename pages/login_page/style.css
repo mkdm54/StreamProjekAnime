@@ -83,8 +83,7 @@
 }
 
 .ui-checkbox {
-    transform: translateY(6px); 
-    -webkit-appearance: none;
+    transform: scale(0.7) translateY(12px) translateX(4px);
     -moz-appearance: none;
     appearance: none;
     width: var(--checkbox-diameter);
@@ -161,4 +160,16 @@
     box-shadow: none;
     transition: none;
     opacity: 1;
+}
+
+label {
+    font-family: "Mukta", serif;
+    font-weight: 500;
+    font-style: normal;
+    text-transform: capitalize;
+}
+
+#label-chexbox {
+    color: rgba(0, 0, 0, 0.842);
+    font-size: 13px;
 }
