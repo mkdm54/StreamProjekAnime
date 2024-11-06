@@ -6,7 +6,7 @@
 }
 
 .login-container {
-    background-color: rgba(255, 166, 0, 0.329);
+    /* background-color: rgba(255, 166, 0, 0.329); */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     padding: 20px;
@@ -54,10 +54,6 @@
     border: none;
     border-radius: 12px;
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
-}
-
-.chexbox-password {
-    transform: translateY(-7px);
 }
 
 /* From Uiverse.io by Galahhad */
@@ -176,4 +172,25 @@ label {
 #label-chexbox {
     color: rgba(0, 0, 0, 0.842);
     font-size: 13px;
+}
+
+.tombol-submit {
+    display: flex;
+    justify-content: center;
+}
+
+.tombol-submit button {
+    background-color: orange;
+    color: rgb(255, 255, 255);
+    width: 200px;
+    padding: 3px;
+    font-size: 18px;
+    text-transform: capitalize;
+    border: none;
+    font-family: "Mukta", serif;
+    font-weight: 500;
+    font-style: normal;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all .5s ease-in-out;
 }
