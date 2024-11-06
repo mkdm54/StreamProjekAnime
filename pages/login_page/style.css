@@ -11,7 +11,7 @@ body {
     width: 100vw;
     height: 100vh;
     z-index: -1;
-    animation: hue-color 5s ease-in infinite alternate-reverse ;
+    animation: hue-color 5s ease-in infinite alternate-reverse;
 }
 
 @keyframes hue-color {
@@ -61,11 +61,24 @@ body {
 }
 
 .input-user input {
-    width: 200px;
+    width: 250px;
     padding: 12px;
     border: none;
     border-radius: 12px;
-    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-user input:focus {
+    outline: none;
+}
+
+.input-user i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    color: orange;
+    font-size: 18px;
+    transform: translateY(5px);
 }
 
 .input-password {
@@ -78,11 +91,23 @@ body {
 }
 
 .input-password #password {
-    width: 200px;
+    width: 250px;
     padding: 12px;
     border: none;
     border-radius: 12px;
-    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-password i {
+    position:absolute;
+    right: 12px;
+    top: 39%;
+    color: orange;
+    font-size: 18px;
+}
+
+.input-password i:focus {
+    outline: none;
 }
 
 /* From Uiverse.io by Galahhad */
