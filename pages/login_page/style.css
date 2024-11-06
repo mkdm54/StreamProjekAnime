@@ -56,6 +56,10 @@
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
 }
 
+.chexbox-password {
+    transform: translateY(-7px);
+}
+
 /* From Uiverse.io by Galahhad */
 /* checkbox settings 👇 */
 /* Menggunakan framework chexbox https://uiverse.io/Galahhad/sweet-ape-100 */
