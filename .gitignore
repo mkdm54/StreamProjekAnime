@@ -1,8 +1,5 @@
 # Mengabaikan folder image dan semua isinya
-asset/image/
+assets/image/
 
 # Mengabaikan folder video dan semua isinya
-asset/video/
-
-# Mengabaikan file README.md
-README.md
+assets/video/
