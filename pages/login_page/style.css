@@ -106,7 +106,7 @@ body {
     font-size: 18px;
 }
 
-.input-password i:focus {
+.input-password input:focus {
     outline: none;
 }
 
@@ -189,11 +189,11 @@ body {
 /* actions */
 
 .ui-checkbox:hover {
-    border-color: var(--primary-color);
+    border-color: orange;
 }
 
 .ui-checkbox:checked {
-    background: var(--primary-color);
+    background: orange;
     border-color: transparent;
 }
 
