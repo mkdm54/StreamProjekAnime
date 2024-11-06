@@ -21,19 +21,21 @@
                 <form action="" method="">
                     <!-- input user -->
                     <div class="input-user">
-                        <label for="username">Username</label>
+                        <label id="label-username" for="username">Username</label>
                         <input placeholder="Masukkan Username" id="username" name="username" type="text" required>
                         <i class="fa-solid fa-user"></i>
                     </div>
                     <!-- input password -->
                     <div class="input-password">
-                        <label for="password">Password</label>
+                        <label for="password" id="label-password">Password</label>
                         <input placeholder="Masukkan Password" id="password" name="password" type="password" required>
                         <i class="fa-solid fa-lock"></i>
-                        <label for="lihat-password">
-                            <input type="checkbox" name="lihat-password" id="lihat-password">
-                            Lihat Password
-                        </label>
+                        <div class="lihat-password">
+                            <label for="lihat-password" id="label-chexbox">
+                                <input type="checkbox" name="lihat-password" id="lihat-password">
+                                Lihat Password
+                            </label>
+                        </div>
                     </div>
                     <!-- submit button -->
                     <div class="tombol-submit">
