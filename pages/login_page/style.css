@@ -1,6 +1,15 @@
-.login-container {
+.main-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+.login-container {
+    
+}
+
+.icon-web img {
+    width: 200px;
+    height: 200px;
 }
