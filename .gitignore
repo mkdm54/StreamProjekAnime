@@ -3,3 +3,6 @@ assets/image/
 
 # Mengabaikan folder video dan semua isinya
 assets/video/
+
+# Mengabaikan lingkungan virtual python
+python-env/
