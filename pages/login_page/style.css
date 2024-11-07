@@ -64,7 +64,8 @@ body {
     width: 250px;
     padding: 12px;
     border: none;
-    border-radius: 12px;
+    background-color: rgb(255, 255, 255);
+    /* border-radius: 12px; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -72,13 +73,27 @@ body {
     outline: none;
 }
 
-.input-user i {
+.user-icon {
+    width: fit-content;
+    background-color: rgb(255, 255, 255);
+    width: 37px;
+    margin: 0;
+    height: 29px;
     position: absolute;
+    left: 237px;
+    top: 37px;
+}
+
+.input-user i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute; */
     right: 12px;
     top: 50%;
     color: orange;
     font-size: 18px;
-    transform: translateY(5px);
+    /* transform: translateY(5px); */
 }
 
 .input-password {
@@ -92,16 +107,30 @@ body {
 
 .input-password #password {
     width: 250px;
+    background-color: rgb(255, 255, 255);
     padding: 12px;
     border: none;
-    border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.password-icon {
+    width: fit-content;
+    background-color: rgb(255, 255, 255);
+    width: 33px;
+    margin: 0;
+    height: 35px;
+    position: absolute;
+    left: 239px;
+    top: 30px;
+}
+
 .input-password i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position:absolute;
-    right: 12px;
-    top: 39%;
+    top: 7px;
+    left: 10px;
     color: orange;
     font-size: 18px;
 }
