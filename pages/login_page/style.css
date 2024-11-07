@@ -65,7 +65,7 @@ body {
     padding: 12px;
     border: none;
     background-color: rgb(255, 255, 255);
-    /* border-radius: 12px; */
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -82,9 +82,11 @@ body {
     position: absolute;
     left: 237px;
     top: 37px;
+    border-radius: 10px;
 }
 
 .input-user i {
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,11 +108,16 @@ body {
 }
 
 .input-password #password {
+    border-radius: 10px;
     width: 250px;
     background-color: rgb(255, 255, 255);
     padding: 12px;
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 .password-icon {
@@ -121,6 +128,7 @@ body {
     height: 35px;
     position: absolute;
     left: 239px;
+    border-radius: 10px;
     top: 30px;
 }
 
