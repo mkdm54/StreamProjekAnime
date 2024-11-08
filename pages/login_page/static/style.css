@@ -52,8 +52,15 @@ body {
 }
 
 .input-user {
-    position: relative;
-    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    width: 250px;
+    padding: 12px;
+    border: none;
+    column-gap: 4px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .input-user #label-username {
@@ -61,16 +68,9 @@ body {
 }
 
 .input-user input {
-    width: 250px;
-    padding: 12px;
     border: none;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.input-user input:focus {
     outline: none;
+    flex: 1;
 }
 
 .user-icon {
@@ -79,20 +79,12 @@ body {
     width: 37px;
     margin: 0;
     height: 29px;
-    position: absolute;
-    left: 237px;
-    top: 37px;
     border-radius: 10px;
 }
 
 .input-user i {
     
-    display: flex;
-    justify-content: center;
-    align-items: center;
     /* position: absolute; */
-    right: 12px;
-    top: 50%;
     color: orange;
     font-size: 18px;
     /* transform: translateY(5px); */
