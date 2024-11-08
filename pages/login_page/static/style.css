@@ -58,7 +58,7 @@ body {
     padding: 12px;
     border: none;
     column-gap: 6px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 166, 0);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -68,9 +68,15 @@ body {
 }
 
 .input-user input {
+    color: white;
+    background-color: rgb(255, 166, 0);
     border: none;
     outline: none;
     flex: 1;
+}
+
+.input-user input::placeholder {
+    color: rgba(255, 255, 255, 0.767);
 }
 
 .user-icon {
@@ -80,9 +86,8 @@ body {
 }
 
 .input-user i {
-    
     /* position: absolute; */
-    color: orange;
+    color: rgb(255, 255, 255);
     font-size: 18px;
     /* transform: translateY(5px); */
 }
@@ -91,7 +96,7 @@ body {
     display: flex;
     border-radius: 10px;
     width: 250px;
-    background-color: rgb(255, 255, 255);
+    background-color: orange;
     padding: 12px;
     border: none;
     column-gap: 6px;
@@ -103,9 +108,15 @@ body {
 }
 
 .input-password input {
+    color: white;
+    background-color: rgb(255, 166, 0);
     border: none;
     outline: none;
-    flex: 2;
+    flex: 1;
+}
+
+.input-password input::placeholder {
+    color: rgba(255, 255, 255, 0.767);
 }
 
 .password-icon {
@@ -114,7 +125,7 @@ body {
 }
 
 .input-password i {
-    color: orange;
+    color: rgb(255, 255, 255);
     font-size: 18px;
 }
 
