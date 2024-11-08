@@ -57,7 +57,7 @@ body {
     width: 250px;
     padding: 12px;
     border: none;
-    column-gap: 4px;
+    column-gap: 6px;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -94,6 +94,7 @@ body {
     background-color: rgb(255, 255, 255);
     padding: 12px;
     border: none;
+    column-gap: 6px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -234,6 +235,10 @@ label {
     text-transform: capitalize;
 }
 
+#label-password {
+    margin-top: 12px;
+}
+
 #label-chexbox {
     color: rgba(0, 0, 0, 0.842);
     font-size: 13px;
@@ -255,7 +260,11 @@ label {
     font-family: "Mukta", serif;
     font-weight: 500;
     font-style: normal;
-    border-radius: 15px;
+    border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: all .5s ease-in-out;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
 }
