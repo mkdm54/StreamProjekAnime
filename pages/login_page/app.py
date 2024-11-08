@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, send_from_directory
+from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
 import os
 
 app = Flask(__name__)
@@ -17,8 +17,10 @@ def validation():
     password = request.form.get('password')
     
     if username != ADMIN_WEB:
-        flash('Username salah')
-        return redirect(url_for('index'))
+        return jsonify({'status': 'error', 'message': 'Username salah'}), 400
+    if password != PASSWORD:
+        return jsonify({'status': 'error', 'message': 'Password salah'}), 400
+    
 
 
 if __name__ == '__main__':
