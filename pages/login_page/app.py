@@ -23,9 +23,9 @@ def validation():
     if username != ADMIN_WEB and password != PASSWORD:
         return jsonify({'status': 'error', 'message': 'Username dan Password salah'}), 400
     elif username != ADMIN_WEB:
-        return jsonify({'status': 'error', 'message': 'Username salah'}), 400
+        return jsonify({'status': 'error', 'message': 'Username salah'}), 401
     elif password != PASSWORD:
-        return jsonify({'status': 'error', 'message': 'Password salah'}), 400
+        return jsonify({'status': 'error', 'message': 'Password salah'}), 401
     else:
         return jsonify({'status': 'succes', 'message': 'login berhassil'}), 200
 
