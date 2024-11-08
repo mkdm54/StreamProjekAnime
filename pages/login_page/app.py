@@ -10,17 +10,24 @@ PASSWORD = 'login123'
 def index():
     return render_template('index.html')
 
+@app.route('/dashboard')
+def halaman_utama():
+    return render_template('dashboard/halaman_utama.html')
+    
 
 @app.route('/login', methods=['POST'])
 def validation():
     username = request.form.get('username')
     password = request.form.get('password')
     
-    if username != ADMIN_WEB:
+    if username != ADMIN_WEB and password != PASSWORD:
+        return jsonify({'status': 'error', 'message': 'Username dan Password salah'}), 400
+    elif username != ADMIN_WEB:
         return jsonify({'status': 'error', 'message': 'Username salah'}), 400
-    if password != PASSWORD:
+    elif password != PASSWORD:
         return jsonify({'status': 'error', 'message': 'Password salah'}), 400
-    
+    else:
+        return jsonify({'status': 'succes', 'message': 'login berhassil'}), 200
 
 
 if __name__ == '__main__':

@@ -12,10 +12,10 @@ lihatPassword.addEventListener('input', (e) => {
     }
 });
 
-document.getElementById('loginForm').addEventListener('submit', async function (event) {
+document.getElementById('form-login').addEventListener('submit', async function (event) {
     event.preventDefault();
     const formData = new FormData(this);
-    const url = this.action;
+    const url = 'http://127.0.0.1:5000/login';
     try {
         const response = await fetch(url, { method: 'POST', body: formData });
         const result = await response.json();
@@ -24,8 +24,10 @@ document.getElementById('loginForm').addEventListener('submit', async function (
         }
         else {
             alert(result.message);
+            window.location.href = '/dashboard'
         }
     }
     catch (error) {
-        console.error(error.message); }
+        console.error(error.message);
+    }
 });
