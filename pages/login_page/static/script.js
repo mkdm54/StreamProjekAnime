@@ -12,15 +12,30 @@ lihatPassword.addEventListener('input', (e) => {
     }
 });
 
+const usernameErrorMessage = document.getElementById('username-error-message');
+const passwordErrorMessage = document.getElementById('password-error-message');
+
 document.getElementById('form-login').addEventListener('submit', async function (event) {
     event.preventDefault();
     const formData = new FormData(this);
     const url = 'http://127.0.0.1:5000/login';
+
+    usernameErrorMessage.style.color = 'red';
+    passwordErrorMessage.style.color = 'red';
+
     try {
         const response = await fetch(url, { method: 'POST', body: formData });
         const result = await response.json();
         if (result.status === 'error') {
-            alert(result.message);
+            // Reset pesan error
+            result.messages.forEach(message => {
+                if (message.includes('Username')) {
+                    usernameErrorMessage.innerHTML = message;
+                }
+                else if (message.includes('Password')) {
+                    passwordErrorMessage.innerHTML = message;
+                }
+            });
         }
         else {
             alert(result.message);

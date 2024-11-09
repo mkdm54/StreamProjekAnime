@@ -20,15 +20,19 @@ def validation():
     username = request.form.get('username')
     password = request.form.get('password')
     
-    if username != ADMIN_WEB and password != PASSWORD:
-        return jsonify({'status': 'error', 'message': 'Username dan Password salah'}), 400
-    elif username != ADMIN_WEB:
-        return jsonify({'status': 'error', 'message': 'Username salah'}), 400
-    elif password != PASSWORD:
-        return jsonify({'status': 'error', 'message': 'Password salah'}), 400
-    else:
-        return jsonify({'status': 'succes', 'message': 'login berhassil'}), 200
-
+    errors = []
+    
+    if username != ADMIN_WEB:
+        errors.append('Username salah')
+    if password != PASSWORD:
+        errors.append('Password salah')
+    
+    # Jika ada error, kirim semua pesan error
+    if errors:
+        return jsonify({'status': 'error', 'messages': errors}), 400
+    
+    # * Jika username dan password benar
+    return jsonify({'status': 'success', 'message': 'login berhassil'}), 200
 
 if __name__ == '__main__':
     app.run(debug=True)
