@@ -20,6 +20,10 @@ document.getElementById('form-login').addEventListener('submit', async function 
     const formData = new FormData(this);
     const url = 'http://127.0.0.1:5000/login';
 
+    //* Mengosongkan pesan error setiap kali ada permintaan baru
+    usernameErrorMessage.innerHTML = '';
+    passwordErrorMessage.innerHTML = '';
+
     usernameErrorMessage.style.color = 'red';
     passwordErrorMessage.style.color = 'red';
 
