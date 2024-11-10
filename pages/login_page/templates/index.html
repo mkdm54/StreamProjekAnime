@@ -56,10 +56,22 @@
                     <div class="tombol-submit">
                         <button type="submit" id="tombol-submit" title="submit">submit</button>
                     </div>
+                    <div class="loading-container" style="display: none;">
+                        <div class="lds-roller">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
                 </form>
             </div>
             {#pop up  ketika  login sukses #}
-            <div class="message-container-success" >
+            <div class="message-container-success" style="display: none;">
                 <div class="popup-success-message">
                     <div class="loading-gif">
                         <img src="{{ url_for('static', filename='assets/gif/loading.gif') }}" alt="Loading GIF">

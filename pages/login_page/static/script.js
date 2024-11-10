@@ -16,6 +16,7 @@ const usernameErrorMessage = document.getElementById('username-error-message');
 const passwordErrorMessage = document.getElementById('password-error-message');
 const popupSuccessMessage = document.getElementsByClassName('message-container-success')[0];
 const succesText = document.getElementById('pesan-berhasil');
+const loadingAnimation = document.getElementsByClassName('loading-container')[0];
 
 document.getElementById('form-login').addEventListener('submit', async function (event) {
     event.preventDefault();
@@ -44,10 +45,11 @@ document.getElementById('form-login').addEventListener('submit', async function 
             });
         }
         else {
-            console.log('Login success:', result.message)
+            loadingAnimation.style.display = 'flex'
             popupSuccessMessage.style.display = 'flex';
             succesText.innerHTML = result.message;
             setTimeout(() => {
+                loadingAnimation.style.display = 'none'
                 popupSuccessMessage.style.display = 'none';  // Sembunyikan pop-up
                 window.location.href = '/dashboard';
             }, 3000);
