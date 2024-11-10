@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request, jsonify
+from werkzeug.security import check_password_hash, generate_password_hash
 
 app = Flask(__name__)
 
 ADMIN_WEB = 'admin'
-PASSWORD = 'admin123'
+PASSWORD_HASH = generate_password_hash('admin123')
 
 @app.route('/')
 def index():
@@ -23,7 +24,7 @@ def validation():
     
     if username != ADMIN_WEB:
         errors.append('Username salah')
-    if password != PASSWORD:
+    if not check_password_hash(PASSWORD_HASH, password):
         errors.append('Password salah')
     
     # Jika ada error, kirim semua pesan error
