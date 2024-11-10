@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='assets/image/logo_website.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Mukta:wght@200;300;400;500;600;700;800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=PT+Sans+Narrow:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Login Page</title>
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="main-container">
+        <div class="login-container">
+            <!-- icon website -->
+            <div class="icon-web">
+                <img src="{{ url_for('static', filename='assets/image/logo_website.png') }}" alt="logo_website">
+            </div>
+            <div class="form-login">
+                <form method="POST" id="form-login">
+                    <!-- input user -->
+                    <label id="label-username" for="username">username</label>
+                    <div class="input-user">
+                        <!-- user-icon  -->
+                        <i class="fa-solid fa-user"></i>
+                        <input placeholder="Masukkan Username" name="username" type="text" required>
+                    </div>
+                    {# Display error message for username input #}
+                    <i id="username-error-message"></i>
+
+                    <!-- input password -->
+                    <label for="password" id="label-password">password</label>
+                    <div class="input-password">
+                        <!-- password icon -->
+                        <i class="fa-solid fa-lock"></i>
+                        <input placeholder="Masukkan Password" id="password" name="password" type="password" required>
+                    </div>
+                    {# Display error message for password input #}
+                    <i id="password-error-message"></i>
+
+                    <div class="chexbox-password">
+                        <label for="lihat-password" id="label-chexbox">
+                            <!-- * Menggunakan framework chexbox https://uiverse.io/Galahhad/sweet-ape-100 -->
+                            <input type="checkbox" name="lihat-password" class="ui-checkbox" id="lihat-password">
+                            lihat password
+                        </label>
+                    </div>
+                    <!-- submit button -->
+                    <div class="tombol-submit">
+                        <button type="submit" id="tombol-submit" title="submit">submit</button>
+                    </div>
+                    <div class="loading-container" style="display: none;">
+                        <div class="lds-roller">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            {#pop up  ketika  login sukses #}
+            <div class="message-container-success" style="display: none;">
+                <div class="popup-success-message">
+                    <div class="loading-gif">
+                        <img src="{{ url_for('static', filename='assets/gif/loading.gif') }}" alt="Loading GIF">
+                    </div>
+                    <div class="text-message">
+                        <h3 id="pesan-berhasil"></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}" ></script>
+</body>
+
+</html>
