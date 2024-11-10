@@ -1,8 +1,5 @@
-# Mengabaikan folder image dan semua isinya
-assets/image/
-
-# Mengabaikan folder video dan semua isinya
-assets/video/
+# Mengabaikan folder assest dan semua isinya
+pages/login_page/static/assets/
 
 # Mengabaikan lingkungan virtual python
 python-env/
