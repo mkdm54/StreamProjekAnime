@@ -32,7 +32,7 @@ def validation():
         return jsonify({'status': 'error', 'messages': errors}), 400
     
     # * Jika username dan password benar
-    return jsonify({'status': 'success', 'message': 'login berhassil'}), 200
+    return jsonify({'status': 'success', 'message': 'login berhasil'}), 200
 
 if __name__ == '__main__':
     app.run(debug=True)

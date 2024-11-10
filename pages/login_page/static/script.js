@@ -14,6 +14,8 @@ lihatPassword.addEventListener('input', (e) => {
 
 const usernameErrorMessage = document.getElementById('username-error-message');
 const passwordErrorMessage = document.getElementById('password-error-message');
+const popupSuccessMessage = document.querySelector('.popup-success-message');
+const succesText = document.getElementById('pesan-berhasil');
 
 document.getElementById('form-login').addEventListener('submit', async function (event) {
     event.preventDefault();
@@ -42,8 +44,12 @@ document.getElementById('form-login').addEventListener('submit', async function 
             });
         }
         else {
-            alert(result.message);
-            window.location.href = '/dashboard'
+            popupSuccessMessage.style.display = 'flex';
+            succesText.innerHTML = result.message;
+            setTimeout(() => {
+                popupSuccessMessage.style.display = 'none';  // Sembunyikan pop-up
+                window.location.href = '/dashboard';
+            }, 3000);
         }
     }
     catch (error) {
