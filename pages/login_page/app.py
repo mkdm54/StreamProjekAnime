@@ -4,7 +4,7 @@ import os
 app = Flask(__name__)
 
 ADMIN_WEB = 'admin'
-PASSWORD = 'login123'
+PASSWORD = 'admin123'
 
 @app.route('/')
 def index():
