@@ -1,5 +1,16 @@
-from flask import Flask, render_template, request, jsonify
-from werkzeug.security import check_password_hash, generate_password_hash
+import sys
+import subprocess
+
+# Jika tidak ada libary flask dan werkzeug, akan diinstal otomatis menggunakan try except
+try:
+    from flask import Flask, render_template, request, jsonify
+    from werkzeug.security import check_password_hash, generate_password_hash
+except ImportError as e:
+    missing_package = str(e).split(" ")[-1]
+    print(f"{missing_package} tidak ditemukan. Menginstal {missing_package}...")
+    subprocess.check_call([sys.executable, "-m", "pip", "install", missing_package])
+    from flask import Flask, render_template, request, jsonify
+    from werkzeug.security import check_password_hash, generate_password_hash
 
 app = Flask(__name__)
 
