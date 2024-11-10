@@ -10,8 +10,9 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: -1;
+    z-index: -10;
     animation: hue-color 5s ease-in infinite alternate-reverse;
+    -webkit-animation: hue-color 5s ease-in infinite alternate-reverse;
 }
 
 @keyframes hue-color {
@@ -30,6 +31,7 @@ body {
     align-items: center;
     height: 100vh;
     background-color: rgba(255, 166, 0, 0.692);
+    z-index: 10;
 }
 
 .login-container {
@@ -38,7 +40,6 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     padding: 20px;
-    z-index: 2
 }
 
 .icon-web {
@@ -281,14 +282,17 @@ label {
 }
 
 .message-container-success {
+    display: none;
     position: absolute;
     top: 475px;
     left: 57px;
-    transform: scale(0.8);
-    -webkit-transform: scale(0.8);
-    -moz-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    -o-transform: scale(0.8);
+    transform: scale(0.7);
+    animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards;
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -o-transform: scale(0.7);
 }
 
 .popup-success-message {
@@ -302,14 +306,18 @@ label {
     font-weight: 500;
     font-size: 14px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    animation: slide-in 1s forwards;
 }
 
 @keyframes slide-in {
     0% {
         opacity: 0;
-        transform: translateY(-50px); /* Geser popup sedikit dari atas */
+        transform: scale(-10px);
+        -webkit-transform: scale(-10px);
+        -moz-transform: scale(-10px);
+        -ms-transform: scale(-10px);
+        -o-transform: scale(-10px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -317,11 +325,12 @@ label {
 }
 
 .text-message h3 {
-    color: green;
+    color: rgb(19, 223, 0);
     text-transform: uppercase;
     font-size: 16px;
     margin: 0;
-    padding-left: 10px; /* Memberi sedikit jarak antara teks dan gambar */
+    padding-left: 10px;
+    /* Memberi sedikit jarak antara teks dan gambar */
 }
 
 .loading-gif img {

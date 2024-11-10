@@ -14,7 +14,7 @@ lihatPassword.addEventListener('input', (e) => {
 
 const usernameErrorMessage = document.getElementById('username-error-message');
 const passwordErrorMessage = document.getElementById('password-error-message');
-const popupSuccessMessage = document.querySelector('.popup-success-message');
+const popupSuccessMessage = document.getElementsByClassName('message-container-success')[0];
 const succesText = document.getElementById('pesan-berhasil');
 
 document.getElementById('form-login').addEventListener('submit', async function (event) {
@@ -44,6 +44,7 @@ document.getElementById('form-login').addEventListener('submit', async function 
             });
         }
         else {
+            console.log('Login success:', result.message)
             popupSuccessMessage.style.display = 'flex';
             succesText.innerHTML = result.message;
             setTimeout(() => {
