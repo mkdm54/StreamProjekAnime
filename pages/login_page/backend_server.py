@@ -1,9 +1,6 @@
 import sys
 import subprocess
 
-import sys
-import subprocess
-
 # Jika tidak ada libary flask dan werkzeug, akan diinstal otomatis menggunakan try except
 try:
     from flask import Flask, render_template, request, jsonify
