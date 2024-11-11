@@ -34,12 +34,14 @@
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     margin-right: 4px;
+    display: flex;
 }
 
 .search-input input {
     border: none;
     outline: none;
     background-color: rgb(255, 255, 255);
+    margin-right: 10px;
 }
 
 .information {
@@ -64,3 +66,5 @@
     -o-border-radius: 5px;
     margin-right: 7px;
 }
+
+
