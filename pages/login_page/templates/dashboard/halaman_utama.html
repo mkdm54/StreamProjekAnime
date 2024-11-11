@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='dashboard_style/dashboard_style.css') }}">
     <link rel="icon" href="{{ url_for('static', filename='assets/image/logo_website.png') }}" type="image/x-icon">
     <title>Dashboard</title>
@@ -10,7 +11,17 @@
 
 <body>
     <nav class="navbar">
-        <h1>oke</h1>
+        <div class="assets-container">
+            <div class="web-icon">
+                <img src="{{ url_for('static', filename='assets/image/logo_website.png') }}" alt="">
+            </div>
+            <div class="information">
+                <div class="search">
+                    <input type="text" placeholder="Search....">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </div>
     </nav>
     <script src="{{url_for('static', filename = 'dashboard_style/dashboard_style.js')}}"></script>
 </body>
