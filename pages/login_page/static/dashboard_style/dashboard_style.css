@@ -25,7 +25,7 @@
     flex: 1;
 }
 
-.search{
+.search-input{
     background-color: rgb(255, 255, 255);
     padding: 10px;
     border-radius: 5px;
@@ -33,10 +33,34 @@
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    margin-right: 4px;
 }
 
-.search input {
+.search-input input {
     border: none;
     outline: none;
     background-color: rgb(255, 255, 255);
+}
+
+.information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seacrh-button button {
+    font-family: "Mukta", serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: white;
+    color: orange;
+    padding: 7px 10px;
+    border: none;
+    font-size: 14px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-right: 7px;
 }
