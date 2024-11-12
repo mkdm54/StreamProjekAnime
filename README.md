@@ -6,7 +6,7 @@ StreamProjekAnime adalah aplikasi web tugas Ujian Tengah Semester. Proyek ini me
 
 1. Download dan Install Python:
 
-   - Buka situs resmi Python [Python](https://https://www.python.org/) dan unduh versi terbaru untuk sistem operasi Anda (Windows, macOS, atau Linux).
+   - Buka situs resmi Python [Python](https://www.python.org/) dan unduh versi terbaru untuk sistem operasi Anda (Windows, macOS, atau Linux).
    - Jalankan installer Python yang sudah diunduh. Pada layar instalasi, centang opsi "Add Python to PATH" agar Python dapat dikenali oleh sistem.
    - Klik "Install Now" dan ikuti langkah-langkah instalasi sampai selesai.
 2. Verifikasi Instalasi Python:
