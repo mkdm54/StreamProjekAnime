@@ -4,8 +4,12 @@
     box-sizing: border-box;
 }
 
-.navbar {
+body {
     background-color: orange;
+}
+
+.navbar {
+    background-color: #ffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -25,8 +29,8 @@
     flex: 1;
 }
 
-.search-input{
-    background-color: rgb(255, 255, 255);
+.search-input {
+    background-color: orange;
     padding: 10px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -40,8 +44,16 @@
 .search-input input {
     border: none;
     outline: none;
-    background-color: rgb(255, 255, 255);
+    background-color: orange;
     margin-right: 10px;
+}
+
+.search-input input::placeholder {
+    color: rgba(255, 255, 255, 0.63);
+}
+
+.search-icon i {
+    color: #ffff;
 }
 
 .information {
@@ -54,8 +66,8 @@
     font-family: "Mukta", serif;
     font-weight: 500;
     font-style: normal;
-    background-color: white;
-    color: orange;
+    background-color: orange;
+    color: white;
     padding: 7px 10px;
     border: none;
     font-size: 14px;
@@ -66,5 +78,3 @@
     -o-border-radius: 5px;
     margin-right: 7px;
 }
-
-
