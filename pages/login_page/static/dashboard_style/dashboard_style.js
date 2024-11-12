@@ -1,4 +1,3 @@
-
 // POP UP MESSAGE
 window.onload = function() {
     const popupMessage = document.getElementById("popupMessage");

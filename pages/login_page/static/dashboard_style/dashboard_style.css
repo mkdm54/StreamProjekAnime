@@ -87,6 +87,10 @@ body {
     transform: translateY(4px);
 }
 
+.seacrh-button button:hover {
+    cursor: pointer;
+}
+
 /* POP-UP MESSAGE */
 .popup-message {
     display: flex;
