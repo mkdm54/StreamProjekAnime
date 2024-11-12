@@ -3,9 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Mukta:wght@200;300;400;500;600;700;800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=PT+Sans+Narrow:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard_style/dashboard_style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='assets/image/logo_website.png') }}" type="image/x-icon">
+    <title>Dashboard</title>
 </head>
+
 <body>
-    <h1>oke</h1>
+    <nav class="navbar">
+        <div class="assets-container">
+            <div class="web-icon">
+                <img src="{{ url_for('static', filename='assets/image/logo_website.png') }}" alt="">
+            </div>
+            <div class="information">
+                <div class="search-input">
+                    <input type="text" placeholder="Search....">
+                    <div class="search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+                <div class="seacrh-button">
+                    <button type="submit">search</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    {# pop-up message #}
+    <div class="popup-message" id="popupMessage">
+        <div class="gif-sleep">
+            <img src="{{url_for('static', filename='assets/gif/cute-sleeping-anime-girl-nwz5qucjpk5bezwy.gif')}}" alt="Zzzzzz......">
+        </div>
+        <div class="text">
+            <p>masih dikembangkan bapak &#128516</p>
+        </div>
+    </div>
+    
+    <script src="{{url_for('static', filename = 'dashboard_style/dashboard_style.js')}}"></script>
 </body>
+
 </html>
